@@ -1,0 +1,226 @@
+/* Footer.css - Complete with Enhanced Contact Section */
+:root {
+  --footer-bg: #111827;
+  --footer-text: #d1d5db;
+  --footer-heading: #ffffff;
+  --footer-link: #9ca3af;
+  --footer-link-hover: #ffffff;
+  --footer-border: #374151;
+  --contact-icon: #a5b4fc;
+  --contact-highlight: #818cf8;
+  --contact-bg: rgba(255, 255, 255, 0.03);
+  --contact-border: rgba(255, 255, 255, 0.08);
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 3rem 0 1.5rem;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.footer-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-heading {
+  color: var(--footer-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--contact-highlight);
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Enhanced Contact Information Section */
+.contact-info {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--contact-bg);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--contact-border);
+  backdrop-filter: blur(4px);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--contact-icon);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  color: var(--contact-highlight);
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-link {
+  color: var(--footer-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.contact-link:hover {
+  color: var(--contact-highlight);
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Specific social media colors */
+.social-link[aria-label="Facebook"]:hover {
+  background: #3b5998;
+}
+
+.social-link[aria-label="Twitter"]:hover {
+  background: #1da1f2;
+}
+
+.social-link[aria-label="LinkedIn"]:hover {
+  background: #0077b5;
+}
+
+.social-link[aria-label="Instagram"]:hover {
+  background: #e1306c;
+}
+
+.social-link[aria-label="YouTube"]:hover {
+  background: #ff0000;
+}
+
+.social-link[aria-label="WhatsApp"]:hover {
+  background: #25d366;
+}
+@media (min-width: 640px) {
+  .social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Footer Links */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-list-item {
+  margin: 0;
+}
+
+.footer-link {
+  color: var(--footer-link);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.footer-link:hover {
+  color: var(--footer-link-hover);
+  transform: translateX(3px);
+}
+
+/* Copyright */
+.footer-copyright {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--footer-border);
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 0.75rem;
+  color: var(--footer-link);
+}
